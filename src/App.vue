@@ -1,9 +1,15 @@
-<template></template>
+<template>
+  <ParallaxWebsite />
+</template>
 
 <script>
+import ParallaxWebsite from "./components/ParallaxWebsite.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    ParallaxWebsite,
+  },
 };
 </script>
 
