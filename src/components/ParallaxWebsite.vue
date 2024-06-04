@@ -78,7 +78,6 @@
       -->
     </header>
 
-    <div class="spacer"></div>
     <main class="main">
       <!-- div .about -->
       <!--   <section class="about">
@@ -362,9 +361,13 @@ import Splitting from "../js/splitting.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import luxy from "../js/luxy.js";
+import PinnedImageVue from "./Pinnedmage.vue";
 
 export default {
   name: "LuxyComponent",
+  components: {
+    PinnedImageVue,
+  },
   mounted() {
     Splitting();
     luxy.init();
@@ -375,26 +378,16 @@ export default {
     gTl
       .from(".title .char", {
         opacity: 0,
-        yPercent: 130,
-        stagger: 0.04,
+        yPercent: 100,
+        stagger: 0.03,
         ease: "back.out",
       })
-      .to(
-        ".header__img",
-        {
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-          scale: 1,
-          ease: "expo.out",
-          duration: 2,
-        },
-        "-=1"
-      )
       .from(
         ".title__exp",
         {
           opacity: 0,
           yPercent: 130,
-          stagger: 0.06,
+          stagger: 0.04,
           ease: "back.out",
         },
         "-=1"
@@ -404,11 +397,22 @@ export default {
         {
           opacity: 0,
           yPercent: 130,
-          stagger: 0.06,
+          stagger: 0.04,
           ease: "back.out",
         },
         "-=1"
       )
+      .to(
+        ".header__img",
+        {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          scale: 1,
+          ease: "back.out",
+          duration: 4,
+        },
+        "-=1"
+      )
+
       .from(
         ".header__marq",
         {
