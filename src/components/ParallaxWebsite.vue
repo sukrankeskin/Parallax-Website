@@ -3,40 +3,69 @@
     <!-- div .header -->
     <header class="header">
       <h1 class="title" data-splitting>
-        <span class="title_paralax">Parallax effect</span
-        ><span class="stroke">on gsap</span>
+        <span class="title_paralax"
+          >Vehicle INSPECTIONS, <br />
+          REINTERPRETED,</span
+        ><span class="stroke">IMAGINATIVELY.</span>
       </h1>
+      <p class="title__exp">
+        Skann, where cutting-edge AI-based computer vision technology meets the
+        automotive world.
+      </p>
+
+      <button class="header__btn">
+        <span class="header__btn-txt">
+          Book a demo
+          <img class="arrow-black" src="../assets/arrow-right.svg" alt="" /><img
+            class="arrow-white"
+            src="../assets/arrow-right-white.svg"
+            alt=""
+        /></span>
+
+        <div class="header__btn-bg"></div>
+      </button>
+
       <div class="header__img">
-        <img src="../assets/1.jpg" alt="1" />
+        <img
+          src="https://images.unsplash.com/photo-1580274437636-1c384e59e9b5?q=80&w=2160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="1"
+        />
       </div>
-      <div class="header__marq">
+      <!-- <div class="header__marq">
         <div class="header__marq-wrapp">
           <span class="header__marq-txt"
-            >discuss your ideas
+            >BOOK A DEMO
             <span class="header__marq-star">
               <img src="../assets/star.svg" alt="" />
             </span>
           </span>
           <span class="header__marq-txt"
-            >discuss your ideas
+            >BOOK A DEMO
             <span class="header__marq-star">
               <img src="../assets/star.svg" alt="" />
             </span>
           </span>
           <span class="header__marq-txt"
-            >discuss your ideas
+            >BOOK A DEMO
             <span class="header__marq-star">
               <img src="../assets/star.svg" alt="" />
             </span>
           </span>
           <span class="header__marq-txt"
-            >discuss your ideas
+            >BOOK A DEMO
+            <span class="header__marq-star">
+              <img src="../assets/star.svg" alt="" />
+            </span>
+          </span>
+          <span class="header__marq-txt"
+            >BOOK A DEMO
             <span class="header__marq-star">
               <img src="../assets/star.svg" alt="" />
             </span>
           </span>
         </div>
       </div>
+      -->
     </header>
 
     <main class="main">
@@ -238,7 +267,7 @@ export default {
       .from(".title .char", {
         opacity: 0,
         yPercent: 130,
-        stagger: 0.06,
+        stagger: 0.04,
         ease: "back.out",
       })
       .to(
@@ -260,6 +289,26 @@ export default {
           duration: 2,
         },
         "-=1.5"
+      )
+      .from(
+        ".title__exp",
+        {
+          opacity: 0,
+          yPercent: 130,
+          stagger: 0.06,
+          ease: "back.out",
+        },
+        "-=1"
+      )
+      .from(
+        ".header__btn",
+        {
+          opacity: 0,
+          yPercent: 130,
+          stagger: 0.06,
+          ease: "back.out",
+        },
+        "-=1"
       );
 
     // Dönen Kareler
@@ -292,6 +341,8 @@ export default {
 
     const headerAnimations = () => {
       createScrollAnimation(".title_paralax", { yPercent: -150 }, ".header");
+      createScrollAnimation(".title__exp", { xPercent: -150 }, ".header");
+      createScrollAnimation(".header__btn", { xPercent: -150 }, ".header");
       createScrollAnimation(".header .stroke", { xPercent: 50 }, ".header");
       createScrollAnimation(".header__img", { xPercent: -70 }, ".header");
       createScrollAnimation(".header__img img", { scale: 1.3 }, ".header");
@@ -308,13 +359,13 @@ export default {
     };
 
     const aboutAnimations = () => {
-      createScrollAnimation(".about__img", { yPercent: 80 }, ".about", {
+      createScrollAnimation(".about__img", { yPercent: -40 }, ".about", {
+        start: "top top",
+      });
+      createScrollAnimation(".about__img img", { scale: 1.5 }, ".about", {
         start: "top bottom",
       });
-      createScrollAnimation(".about__img img", { scale: 1.6 }, ".about", {
-        start: "top bottom",
-      });
-      createScrollAnimation(".about__txt", { yPercent: 50 }, ".about__wrapp", {
+      createScrollAnimation(".about__txt", { yPercent: 20 }, ".about__wrapp", {
         start: "top bottom",
       });
     };

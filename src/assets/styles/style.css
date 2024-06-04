@@ -2,14 +2,14 @@
 /****************************************************/
 :root {
   --pr-color: #fff;
-  --second-color: #0a0a0a;
+  --second-color: #060a0f;
   --cubicbz: cubic-bezier(0.9, 0, 0.1, 1);
   --fz-big: 60px;
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Syne", sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: 800;
   margin: 0;
   padding: 0;
@@ -49,9 +49,11 @@ section {
   display: flex;
   padding: 0 70px;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 100%;
   height: 100vh;
+  flex-direction: column;
+  row-gap: 32px;
 }
 
 .header__marq {
@@ -63,7 +65,7 @@ section {
 .header__marq {
   width: 100%;
   height: auto;
-  background: #171717;
+  background: rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 
@@ -82,7 +84,7 @@ section {
   margin-right: 15px;
   text-transform: uppercase;
   color: var(--pr-color);
-  color: #9e9e9e;
+
   font-size: 35px;
 }
 
@@ -102,14 +104,85 @@ section {
 .title {
   position: relative;
   margin: 0;
-  font-size: 85px;
-  text-align: center;
+  font-size: 74px;
+  text-align: start;
   color: var(--pr-color);
   text-transform: uppercase;
   mix-blend-mode: difference;
   z-index: 2;
 }
+.title__exp {
+  line-height: 1.67;
+  font-size: 18px;
+  color: #979797;
+  width: 35vw;
+  text-align: start;
+  font-weight: 600;
+}
+.header__btn {
+  position: relative;
+  display: block;
+  width: 290px;
+  padding: 30px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  color: var(--pr-color);
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.header__btn .arrow-black {
+  display: none;
+}
+.header__btn:hover .arrow-black {
+  display: block;
+}
+.header__btn:hover .arrow-white {
+  display: none;
+}
 
+.header__btn-txt {
+  position: relative;
+  pointer-events: none;
+  transition: all 0.4s;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.header__btn:hover .header__btn-txt {
+  letter-spacing: 4px;
+  width: 100%;
+  align-items: center;
+  color: var(--second-color);
+}
+.header__btn-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translateX(-102%);
+  background: #ffffff;
+  transition: all 0.4s;
+  z-index: 1;
+}
+.header__btn:hover .header__btn-bg {
+  transform: translateX(0);
+}
 .title_paralax {
   display: inline-block;
   will-change: transform;
@@ -123,10 +196,10 @@ section {
 
 .header__img {
   position: absolute;
-  width: 45%;
+  width: 50%;
   height: 100%;
   top: 0;
-  right: 100px;
+  right: 48px;
   clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
   overflow: hidden;
 }
