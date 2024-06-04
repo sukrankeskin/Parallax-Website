@@ -5,8 +5,9 @@
       <h1 class="title" data-splitting>
         <span class="title_paralax"
           >Vehicle INSPECTIONS, <br />
-          REINTERPRETED,</span
-        ><span class="stroke">IMAGINATIVELY.</span>
+          REINTERPRETED, <br />
+          <span class="stroke">IMAGINATIVELY.</span>
+        </span>
       </h1>
       <p class="title__exp">
         Skann, where cutting-edge AI-based computer vision technology meets the
@@ -77,24 +78,28 @@
       -->
     </header>
 
+    <div class="spacer"></div>
     <main class="main">
       <!-- div .about -->
-      <section class="about">
+      <!--   <section class="about">
         <div class="about__wrapp">
           <div class="about__img">
-            <img src="../assets/2.jpg" alt="2" />
+            <img src="../assets/deepscan.png" alt="2" />
           </div>
           <div class="about__txt">
             <h2 class="section-title">
-              abo<span class="stroke">ut</span>
-              <span class="section-title__square"></span>
+              Deep<span class="stroke">scan</span>
+              <span class="section-title__square">
+                <img src="../assets/skann-icon.svg" alt="" />
+              </span>
             </h2>
             <p class="about__p">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              esse aspernatur fugit debitis quisquam. Quia exercitationem ipsum
-              voluptas voluptatum hic enim quo provident culpa possimus
-              cupiditate! Dolorum quae doloremque cum rerum ipsam inventore
-              beatae, at odit, velit, aspernatur minima! Corporis.
+              Introducing DeepScan Your Ultimate AI-Powered Vehicle Inspector.
+              Our state-of-the-art web-based app, powered by DeepScan
+              technology, transforms your mobile phone camera into a powerful
+              defect detection tool. Effortlessly capture photos or videos of
+              vehicles, and let DeepScan's advanced AI analyze and identify
+              damages or defects with precision.
             </p>
           </div>
         </div>
@@ -102,24 +107,100 @@
         <div class="about__wrapp">
           <div class="about__txt">
             <h2 class="section-title">
-              abo<span class="stroke">ut</span>
-              <span class="section-title__square"></span>
+              Pure<span class="stroke">vision</span>
+              <span class="section-title__square">
+                <img src="../assets/skann-icon.svg" alt="" />
+              </span>
             </h2>
             <p class="about__p">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              esse aspernatur fugit debitis quisquam. Quia exercitationem ipsum
-              voluptas voluptatum hic enim quo provident culpa possimus
-              cupiditate! Dolorum quae doloremque cum rerum ipsam inventore
-              beatae, at odit, velit, aspernatur minima! Corporis.
+              Experience the Future of Vehicle Inspection: PureVision, our
+              cutting-edge AI solution meticulously crafted for integrated CCTV
+              cameras. By seamlessly melding AI and computer vision, PureVision
+              revolutionizes defect detection, ensuring every imperfection is
+              identified swiftly and precisely. Elevate your vehicle maintenance
+              standards with the power of Skann's PureVision.
             </p>
           </div>
           <div class="about__img">
-            <img src="../assets/2.jpg" alt="2" />
+            <img src="../assets/purevision.png" alt="2" />
+          </div>
+        </div>
+
+        <div class="about__wrapp">
+          <div class="about__img">
+            <img src="../assets/isaac.png" alt="2" />
+          </div>
+          <div class="about__txt">
+            <h2 class="section-title">
+              ISAAC
+              <span class="section-title__square">
+                <img src="../assets/skann-icon.svg" alt="" />
+              </span>
+            </h2>
+            <p class="about__p">
+              Revolutionizing Vehicle Inspection with Project Isaac. Experience
+              a new era of defect detection as our innovative solution, equipped
+              with five built-in cameras, employs the unmatched power of
+              PureVision technology. Vehicles passing through this cutting-edge
+              structure are meticulously scanned for damages and defects in
+              real-time, ensuring uncompromised quality control. Elevate your
+              inspection standards and drive with confidence, courtesy of
+              Project Isaac.
+            </p>
+          </div>
+        </div>
+
+        <div class="about__wrapp">
+          <div class="about__txt">
+            <h2 class="section-title">
+              Tire<span class="stroke">Scope</span>
+              <span class="section-title__square">
+                <img src="../assets/skann-icon.svg" alt="" />
+              </span>
+            </h2>
+            <p class="about__p">
+              Discover TireScope: Redefining Tire Performance Assessment with
+              AI-Powered Precision. Our innovative web-based mobile app utilizes
+              advanced computer vision to revolutionize how you evaluate tire
+              conditions. By accurately measuring tread depth, TireScope
+              empowers users to gauge tire performance effortlessly, promoting
+              safer journeys and informed maintenance choices for enhanced
+              vehicle efficiency. Experience the future of tire care with
+              TireScope.
+            </p>
+          </div>
+          <div class="about__img">
+            <img src="../assets/tirescope.png" alt="2" />
+          </div>
+        </div>
+
+        <div class="about__wrapp">
+          <div class="about__img">
+            <img src="../assets/hub.png" alt="2" />
+          </div>
+          <div class="about__txt">
+            <h2 class="section-title">
+              HUB
+              <span class="section-title__square">
+                <img src="../assets/skann-icon.svg" alt="" />
+              </span>
+            </h2>
+            <p class="about__p">
+              Welcome to Hub: Streamlined Vehicle Damage Reporting for
+              Professionals. Designed as a centralized platform, Hub employs
+              advanced computer vision to collect comprehensive damage reports,
+              equipping professionals with a streamlined portal to access and
+              screen essential information. Make informed decisions effortlessly
+              by harnessing the power of Hub's data-driven insights for
+              effective vehicle management.
+            </p>
           </div>
         </div>
       </section>
+       -->
 
       <!-- div .benefits -->
+
       <section class="benefits">
         <div class="content">
           <h2 class="section-title">
@@ -376,7 +457,7 @@ export default {
       createScrollAnimation(".header__img img", { scale: 1.8 }, ".header");
       createScrollAnimation(
         ".header__marq-wrapp",
-        { xPercent: -50 },
+        { xPercent: -150 },
         ".header"
       );
       createScrollAnimation(
@@ -387,13 +468,13 @@ export default {
     };
 
     const aboutAnimations = () => {
-      createScrollAnimation(".about__img", { yPercent: -40 }, ".about", {
-        start: "top top",
-      });
-      createScrollAnimation(".about__img img", { scale: 1.5 }, ".about", {
+      createScrollAnimation(".about__img", { yPercent: 30 }, ".about", {
         start: "top bottom",
       });
-      createScrollAnimation(".about__txt", { yPercent: 20 }, ".about__wrapp", {
+      createScrollAnimation(".about__img img", { scale: 1.4 }, ".about", {
+        start: "top bottom",
+      });
+      createScrollAnimation(".about__txt", { yPercent: 30 }, ".about__wrapp", {
         start: "top bottom",
       });
     };
