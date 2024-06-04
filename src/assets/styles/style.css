@@ -104,7 +104,7 @@ section {
 .title {
   position: relative;
   margin: 0;
-  font-size: 74px;
+  font-size: 65px;
   text-align: start;
   color: var(--pr-color);
   text-transform: uppercase;
@@ -124,7 +124,7 @@ section {
   display: block;
   width: 290px;
   padding: 30px;
-  height: 70px;
+  height: 60px;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -157,6 +157,7 @@ section {
   pointer-events: none;
   transition: all 0.4s;
   z-index: 2;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -191,7 +192,7 @@ section {
 .title .stroke {
   display: inline-block;
   color: transparent;
-  -webkit-text-stroke: 1px var(--pr-color);
+  -webkit-text-stroke: 2px var(--pr-color);
 }
 
 .header__img {

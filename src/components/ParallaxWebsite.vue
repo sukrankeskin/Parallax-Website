@@ -27,10 +27,19 @@
 
       <div class="header__img">
         <img
+          id="myImage"
+          src="https://images.unsplash.com/photo-1580274437636-1c384e59e9b5?q=80&w=2160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+      </div>
+      <!--   <div class="header__img">
+        <img
           src="https://images.unsplash.com/photo-1580274437636-1c384e59e9b5?q=80&w=2160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="1"
         />
+
       </div>
+
+      -->
       <!-- <div class="header__marq">
         <div class="header__marq-wrapp">
           <span class="header__marq-txt"
@@ -281,16 +290,6 @@ export default {
         "-=1"
       )
       .from(
-        ".header__marq",
-        {
-          opacity: 0,
-          yPercent: 100,
-          ease: "expo.out",
-          duration: 2,
-        },
-        "-=1.5"
-      )
-      .from(
         ".title__exp",
         {
           opacity: 0,
@@ -309,6 +308,16 @@ export default {
           ease: "back.out",
         },
         "-=1"
+      )
+      .from(
+        ".header__marq",
+        {
+          opacity: 0,
+          yPercent: 100,
+          ease: "expo.out",
+          duration: 2,
+        },
+        "-=1.5"
       );
 
     // Dönen Kareler
@@ -332,7 +341,7 @@ export default {
         scrollTrigger: {
           trigger: trigger,
           start: "top top",
-          scrub: 1.9,
+          scrub: 1.2,
           ...extraProps,
         },
         ...props,
@@ -345,7 +354,7 @@ export default {
       createScrollAnimation(".header__btn", { xPercent: -150 }, ".header");
       createScrollAnimation(".header .stroke", { xPercent: 50 }, ".header");
       createScrollAnimation(".header__img", { xPercent: -70 }, ".header");
-      createScrollAnimation(".header__img img", { scale: 1.3 }, ".header");
+      createScrollAnimation(".header__img img", { scale: 1.8 }, ".header");
       createScrollAnimation(
         ".header__marq-wrapp",
         { xPercent: -50 },
