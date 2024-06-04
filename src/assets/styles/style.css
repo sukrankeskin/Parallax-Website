@@ -258,6 +258,7 @@ section {
 
 .about__txt {
   padding-right: 70px;
+  padding-left: 70px;
 }
 
 .about__p {
@@ -267,7 +268,7 @@ section {
 }
 
 .about__img {
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
