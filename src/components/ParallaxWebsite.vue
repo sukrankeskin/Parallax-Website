@@ -198,7 +198,7 @@
       </section>
        -->
 
-      <!-- div .benefits -->
+      <!-- div .benefits 
 
       <section class="benefits">
         <div class="content">
@@ -253,39 +253,55 @@
           </ul>
         </div>
       </section>
-
+-->
       <!-- div .work -->
       <section class="work">
         <div class="content">
           <h2 class="section-title">
-            portfo<span class="stroke">lio</span>
+            products
             <span class="section-title__square"></span>
           </h2>
         </div>
 
         <div class="work__wrapp">
           <div class="work__item" data-speed="-300">
-            <span class="work__item-num" data-speed="-1000">/001</span>
+            <span class="work__item-num" data-speed="-900">Deepscan</span>
             <div class="work__item-img">
-              <img src="../assets/3.jpg" alt="3" />
+              <img src="../assets/deepscan.png" alt="3" />
             </div>
           </div>
           <div class="work__item" data-speed="-600">
-            <span class="work__item-num" data-speed="-500">/002</span>
+            <span class="work__item-num" data-speed="-600">Purevision</span>
             <div class="work__item-img">
-              <img src="../assets/4.jpg" alt="4" />
+              <img src="../assets/purevision.png" alt="4" />
             </div>
           </div>
           <div class="work__item" data-speed="-700">
-            <span class="work__item-num" data-speed="-700">/003</span>
+            <span class="work__item-num" data-speed="-500">Isaac</span>
             <div class="work__item-img">
-              <img src="../assets/5.jpg" alt="5" />
+              <img src="../assets/isaac.png" alt="5" />
             </div>
           </div>
           <div class="work__item" data-speed="-400">
-            <span class="work__item-num" data-speed="-200">/004</span>
+            <span class="work__item-num" data-speed="-400">Tirescope</span>
             <div class="work__item-img">
-              <img src="../assets/6.jpg" alt="6" />
+              <img src="../assets/tirescope.png" alt="6" />
+            </div>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100vw;
+            "
+          >
+            <div class="work__item" data-speed="-400">
+              <span class="work__item-num" data-speed="-400">Hub</span>
+              <div class="work__item-img">
+                <img src="../assets/hub.png" alt="6" />
+              </div>
             </div>
           </div>
         </div>
