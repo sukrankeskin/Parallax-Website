@@ -257,9 +257,11 @@
       <!-- div .work -->
       <section class="work">
         <div class="content">
-          <h2 class="section-title">
+          <h2 class="section-title" style="margin-right: 600px">
             products
-            <span class="section-title__square"></span>
+            <span class="section-title__square">
+              <img class="skann-icon" src="../assets/skann-icon.svg" alt="" />
+            </span>
           </h2>
         </div>
 
@@ -524,6 +526,14 @@ export default {
         { scale: 1.6 },
         ".work__wrapp",
         { start: "top bottom" }
+      );
+      createScrollAnimation(
+        ".section-title",
+        { xPercent: 100 },
+        ".work__wrapp",
+        {
+          start: "top bottom",
+        }
       );
     };
 
