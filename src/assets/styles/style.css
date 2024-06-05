@@ -527,3 +527,174 @@ section {
 .product__btn:hover .product__btn-bg {
   transform: translateX(0);
 }
+.container-workflow {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  column-gap: 0px;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.brain {
+  padding: 32px;
+}
+
+.container-inside-div {
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  width: 30vw;
+  display: flex;
+}
+
+.container-workflow svg {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+}
+.brain svg {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes slideMask {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes slideMask2 {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes slideMaskBrain {
+  from {
+    transform: translateX(-260%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.container-workflow .mask-rect {
+  animation: slideMask 3s ease infinite;
+}
+
+.mask-rect3 {
+  animation: slideMaskBrain 3s ease infinite;
+}
+.container-workflow .mask-rect2 {
+  animation: slideMask2 3s ease infinite;
+}
+
+.big-box {
+  width: 6rem;
+  height: 11rem;
+  background: #edebeb;
+  position: absolute;
+  right: 0;
+  top: 8rem;
+  bottom: auto;
+  left: auto;
+  z-index: 9;
+  color: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 4rem;
+  height: 4rem;
+  background: #edebeb;
+  position: absolute;
+  color: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box.first {
+  top: -2rem;
+}
+
+.box.second {
+  top: 6rem;
+}
+
+.box.third {
+  top: 15rem;
+}
+
+.box.fourth {
+  bottom: -2rem;
+}
+.brain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-text-item-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 16px;
+}
+.workflow-icon {
+  height: 40px;
+}
+.workflow-icon-text-div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  align-items: start;
+}
+.workflow-icon-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+.workflow-icon-exp {
+  font-size: 12px;
+  font-weight: 500;
+  color: #979797;
+}
+.workflow-left-items,
+.workflow-right-items {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: space-between;
+}
+
+@media (max-width: 1100px) {
+  .workflow-left-items,
+  .workflow-right-items {
+    height: 340px;
+  }
+}
+@media (max-width: 1000px) {
+  .workflow-left-items,
+  .workflow-right-items {
+    height: 310px;
+  }
+}
+@media (max-width: 900px) {
+  .workflow-left-items,
+  .workflow-right-items {
+    height: 250px;
+  }
+}
