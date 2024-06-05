@@ -251,7 +251,7 @@
         </div>
       </section>
 -->
-      <!-- div .work -->
+      <!-- div products -->
       <section class="work">
         <div class="content">
           <h2 class="section-title" style="margin-right: 600px">
@@ -347,7 +347,7 @@
         </div>
       </section>
 
-      <!-- div .serv -->
+      <!-- div .serv 
       <section class="serv">
         <div class="content">
           <h2 class="section-title">
@@ -390,23 +390,20 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
+
+      <!-- div workflow -->
+      <section class="work"></section>
     </main>
 
     <!-- div .footer -->
     <footer class="footer">
       <div class="footer__div">
-        <span data-speed="-300">a</span>
-        <span data-speed="100">p</span>
-        <span data-speed="300">p</span>
-        <span data-speed="-300">r</span>
-        <span data-speed="350">o</span>
-        <span data-speed="200">v</span>
-        <span data-speed="-310">e</span>
-        <span data-speed="200">c</span>
-        <span data-speed="-340">o</span>
-        <span data-speed="-100">d</span>
-        <span data-speed="300">e</span>
+        <span data-speed="-300">s</span>
+        <span data-speed="100">k</span>
+        <span data-speed="300">a</span>
+        <span data-speed="-300">n</span>
+        <span data-speed="350">n</span>
       </div>
     </footer>
   </div>
