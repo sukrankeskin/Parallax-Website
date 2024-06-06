@@ -254,7 +254,7 @@
       <!-- div products -->
       <section class="work">
         <div class="content">
-          <h2 class="section-title" style="margin-right: 600px">
+          <h2 class="title section-title" style="margin-right: 600px">
             Product<span class="stroke">s</span>
 
             <span class="section-title__square">
@@ -394,6 +394,25 @@
 
       <!-- div workflow -->
       <section class="workflow">
+        <h1
+          class="title title_workflow"
+          data-splitting
+          style="transform: translateY(100px)"
+        >
+          <span class="title_workflow"
+            >WORK
+            <span class="stroke">FLOW</span>
+          </span>
+          <span class="section-title__square">
+            <img class="skann-icon" src="../assets/skann-icon.svg" alt="" />
+          </span>
+        </h1>
+        <p class="workflow__exp" style="transform: translateY(100px)">
+          Visuals collected through DeepScan, PureVision & TireScope are
+          processed through our AI & IP technology and the outputs are displayed
+          to our customers as per their needs. Outputs are accessible through
+          SkannHub, APIs and PDFs.
+        </p>
         <div class="container-workflow">
           <div class="workflow-left-items">
             <div class="left-text-item-div">
@@ -762,6 +781,21 @@ export default {
       });
     });
 
+    // Dönen Workflow ikonları
+    const gsapIco = gsap.utils.toArray(".workflow-icon");
+    gsapSq.forEach((gSq) => {
+      const rotateAnim = gsap.from(gsapIco, {
+        rotation: 720,
+        duration: 3,
+      });
+      ScrollTrigger.create({
+        trigger: gsapIco,
+        animation: rotateAnim,
+        start: "top bottom",
+        scrub: 1.9,
+      });
+    });
+
     // Animasyon Fonksiyonları
     const createScrollAnimation = (target, props, trigger, extraProps = {}) => {
       gsap.to(target, {
@@ -850,15 +884,31 @@ export default {
       );
     };
 
-    const servicesAnimations = () => {
-      gsap.from(".serv__item-arrow", {
-        x: (i, el) => 1 - parseFloat(el.getAttribute("data-speed")),
-        scrollTrigger: {
-          trigger: ".serv__list",
+    const workflowAnimations = () => {
+      createScrollAnimation(
+        ".title_workflow",
+        { yPercent: -130 },
+        ".workflow",
+        {
           start: "top bottom",
-          scrub: 1.9,
-        },
-      });
+        }
+      );
+      createScrollAnimation(
+        ".workflow__exp",
+        { yPercent: -130, width: 600 },
+        ".workflow",
+        {
+          start: "top bottom",
+        }
+      );
+      createScrollAnimation(
+        ".container-workflow",
+        { yPercent: 5 },
+        ".workflow",
+        {
+          start: "top bottom",
+        }
+      );
     };
 
     const footerAnimations = () => {
@@ -878,8 +928,9 @@ export default {
     headerAnimations();
     aboutAnimations();
     benefitsAnimations();
+    workflowAnimations();
     portfolioAnimations();
-    servicesAnimations();
+
     footerAnimations();
   },
 };
