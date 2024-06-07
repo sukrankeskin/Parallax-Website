@@ -256,92 +256,91 @@
         <div class="content">
           <h2 class="title section-title" style="margin-right: 600px">
             Product<span class="stroke">s</span>
-
-            <span class="section-title__square">
-              <img class="skann-icon" src="../assets/skann-icon.svg" alt="" />
-            </span>
           </h2>
         </div>
 
         <div class="work__wrapp">
-          <div class="work__item" data-speed="-300">
-            <span class="work__item-num" data-speed="-900">Deepscan</span>
+          <div class="work__item deepscan" data-speed="-200">
             <div class="work__item-img">
               <img src="../assets/deepscan.png" alt="3" />
             </div>
-            <div class="work__item-text-div">
-              Capture vehicle photos with your mobile phone camera, and let
-              DeepScan's advanced AI analyze and identify damages or defects
-              with precision.
+            <div class="item-copy">
+              <div class="item-copy-1">
+                <div class="shape">
+                  <div id="number"><span>DeepScan</span></div>
+                  <div class="work__item-text">
+                    A web application powered by DeepScan technology, turning
+                    your mobile phone into a powerful defect detection tool.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="work__item" data-speed="-600">
-            <span class="work__item-num" data-speed="-600">Purevision</span>
+          <div class="work__item purevision" data-speed="-600">
             <div class="work__item-img">
               <img src="../assets/purevision.png" alt="4" />
             </div>
-            <div class="work__item-text-div">
-              Our solution integrates AI and computer vision to swiftly and
-              accurately detect every imperfection. Elevate your vehicle
-              maintenance standards with the power of Skann's PureVision.
+            <div class="item-copy">
+              <div class="item-copy-1">
+                <div class="shape">
+                  <div id="number"><span>PureVision</span></div>
+                  <div class="work__item-text">
+                    An AI solution designed for CCTV cameras, revolutionizing
+                    defect detection by swiftly and accurately identifying every
+                    imperfection.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="work__item" data-speed="-100">
-            <span class="work__item-num" data-speed="-600">Isaac</span>
+          <div class="work__item isaac" data-speed="50">
             <div class="work__item-img">
               <img src="../assets/isaac.png" alt="5" />
             </div>
-            <div class="work__item-text-div">
-              Equipped with five built-in cameras, our innovative solution uses
-              PureVision technology to scan for damages and defects in
-              real-time, ensuring the highest standards of quality control.
+            <div class="item-copy">
+              <div class="item-copy-1">
+                <div class="shape">
+                  <div id="number"><span>Isaac</span></div>
+                  <div class="work__item-text">
+                    An innovative solution with five built-in cameras for
+                    vehicle inspection, meticulously scanning vehicles for
+                    damages and defects.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="work__item" data-speed="-400">
-            <span class="work__item-num" data-speed="-400">Tirescope</span>
+          <div class="work__item tirescope" data-speed="-400">
             <div class="work__item-img">
               <img src="../assets/tirescope.png" alt="6" />
             </div>
-            <div class="work__item-text-div">
-              Utilize advanced computer vision to evaluate tire conditions and
-              measure tread depth with precision, promoting safer journeys and
-              informed maintenance decisions.
+            <div class="item-copy">
+              <div class="item-copy-1">
+                <div class="shape">
+                  <div id="number"><span>TireScope</span></div>
+                  <div class="work__item-text">
+                    A mobile app redefining tire condition assessment, enabling
+                    easy evaluation of tire performance.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="hub-div">
-            <div class="work__item" data-speed="-10">
-              <span class="work__item-num" data-speed="-900">Hub</span>
-              <div class="work__item-img">
-                <img src="../assets/hub.jpg" alt="6" />
-              </div>
-              <div class="work__item-text-div">
-                Our centralized platform uses advanced computer vision to
-                collect comprehensive damage reports, providing professionals
-                with the data-driven insights needed for effective vehicle
-                management.
-              </div>
+          <div class="work__item" data-speed="-100">
+            <div class="work__item-img">
+              <img src="../assets/hub.jpg" alt="6" />
             </div>
-
-            <div class="hub-exp-div" style="transform: translateX(600px)">
-              <p class="hub__exp">
-                Discover our revolutionary vehicle inspection solutions!
-                Experience AI-powered vehicle inspection, tire performance
-                assessment, and professional damage reporting with our
-                innovative products: Deepscan, Purevision, Isaac, Tirescope, and
-                Hub. Each of our products offers precision and efficiency to
-                enhance your vehicle maintenance and management standards. Click
-                to see more details.
-              </p>
-
-              <button class="product__btn">
-                <span class="product__btn-txt">
-                  See Details
-                  <img class="arrow-gray" src="../assets/arrow-gray.svg" alt=""
-                /></span>
-
-                <div class="product__btn-bg"></div>
-              </button>
+            <div class="item-copy">
+              <div class="item-copy-1">
+                <div class="shape">
+                  <div id="number"><span>Hub</span></div>
+                  <div class="work__item-text">
+                    A central platform for professionals, collecting
+                    comprehensive damage reports and providing powerful data for
+                    effective vehicle management.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -852,7 +851,7 @@ export default {
     };
 
     const portfolioAnimations = () => {
-      gsap.from([".work__item", ".work__item-num"], {
+      gsap.from([".work__item"], {
         y: (i, el) => 1 - parseFloat(el.getAttribute("data-speed")),
         scrollTrigger: {
           trigger: ".work",
